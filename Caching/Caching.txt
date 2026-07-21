@@ -1,0 +1,32 @@
+Caching is a process of storing frequently accessed data in a location from where it can be accessed quickly. The purpose of caching is to improve the performance and efficiency of a system by reducing the amount of time it takes to access frequently accessed data. General working of cache:
+
+1. The first time user sends a request, the cache is checked - no data is available (cache miss) - the data is fetched from the main database and then loaded into the cache and finally returned to the user.
+2. Next time onwards, if we get the same request, the data is now present in cache(cache hit) so it is returned directly from cache thus reducing response time.
+
+Challenges of cache:
+
+1. The whole database cannot be stored in cache since cache memory is expensive (as it is usually stored in RAM) and loading all data in cache is not feasible.
+2. Cache is volatile. If the system crashes or reboots then all cache data will be lost. 
+3. Depending on the system, the cache may take a little time to update in case there is a db update - resulting in stale data from cache.
+
+Types of cache:
+
+1. Application server cache - An Application Server Cache is a storage layer within an application server that temporarily holds frequently accessed data.
+2. Distributed cache  - There are multiple nodes that contain a part of  the main cache space. To identify which node has which request, the cache is divided using a consistent hashing function so that the request can be routed properly. 
+3. Global cache - There is a single cache space and all the nodes use this cache space.
+4. CDN - It is a group of servers that are placed across the globe with the purpose of accelerating the delivery of web content. A CDN:
+    - Manages servers that are geographically distributed over different locations.
+    - Stores the web content in its servers.
+    - Attempts to direct each user to a server that is part of the CDN and close to the user so as to deliver content quickly.
+
+Cache invalidation strategies:
+
+Cache needs to be invalidated in case of db update so that users are not served stale data. In order to do so, many systems apply time based expiration, event-driven invalidation where invalidation is triggered in case of an update.
+
+Eviction policies:
+
+These are certain rules that determine how to remove existing cache if cache is full and new data is to be stored in cache. Some common policies are:
+
+- The Least Recently Used (LRU) policy is a strategy that eliminates the item that has been accessed the least recently. According to this assumption, items which have been used recently are more likely to be utilized again shortly.
+- Another method is the Least Frequently Used (LFU) policy, removing the least frequently accessed items.
+- Alternatively, there's the First-In-First-Out (FIFO) policy, evicting the oldest cached item.
