@@ -1,3 +1,5 @@
+//EXAMPLE OF SIMPLE STRATEGY DESIGN
+
 interface Walkable{
     void walk();
 }
