@@ -89,3 +89,12 @@ public class SingletonExample{
     }
 }
 ```
+
+## Observer Design Pattern:
+
+It involves an observable object and an observer(another object). The observer should read any state changes of the observable(if any). Formally, this design pattern defines a one to many relationship between objects so that one object changes state, all of its dependents are notified and updated automatically. For this purpose, there are many methods such as:
+
+1. Polling - Gather data periodically. It sends requests to the observable and observable responds with the appropriate response. But this is write intensive and very time consuming.
+2. Pushing - Whenever there is a state change, the observable pushes the change(or sends) to all the observers. The observable needs to have information about the observers.
+
+![image.png](image%203.png)
