@@ -98,3 +98,15 @@ It involves an observable object and an observer(another object). The observer s
 2. Pushing - Whenever there is a state change, the observable pushes the change(or sends) to all the observers. The observable needs to have information about the observers.
 
 ![image.png](image%203.png)
+
+## Decorator Design Pattern:
+
+Traditional inheritance may lead to class explosion - where each new change requires more classes to be created. There may be times where we need to combine two or more classes, so creating classes for all combinations will lead to a huge number of classes.
+
+Decorator pattern wraps another object as decorator over the base object and can enhance the output of the base object dynamically. Multiple decorators can be stacked up which access the base object by inheritance but modify output using composition. This all can be done at runtime.
+
+![image.png](image%204.png)
+
+![image.png](image%205.png)
+
+In this example, we can see that we are creating an object at runtime and can pass all required parameters during runtime(whatever combination we need). The decorator calls those classes along with the base character function.
