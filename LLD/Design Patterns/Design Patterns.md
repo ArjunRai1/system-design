@@ -110,3 +110,13 @@ Decorator pattern wraps another object as decorator over the base object and can
 ![image.png](image%205.png)
 
 In this example, we can see that we are creating an object at runtime and can pass all required parameters during runtime(whatever combination we need). The decorator calls those classes along with the base character function.
+
+## Command Design Pattern:
+
+The **Command Design Pattern** is **a behavioral software design pattern that encapsulates a request as a standalone object, containing all the information needed to perform an action**. This  completely decouples the object that triggers the operation (the sender/invoker) from the object that actually knows how to execute it (the receiver).
+
+## Adapter Design Pattern:
+
+It is a design pattern which allows objects with different interfaces to work together. It acts as a bridge between two difference incompatible interfaces and helps them to work together. 
+
+![image.png](image%206.png)
