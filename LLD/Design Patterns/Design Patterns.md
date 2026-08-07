@@ -120,3 +120,11 @@ The **Command Design Pattern** is **a behavioral software design pattern that en
 It is a design pattern which allows objects with different interfaces to work together. It acts as a bridge between two difference incompatible interfaces and helps them to work together. 
 
 ![image.png](image%206.png)
+
+## Facade Design Pattern:
+
+It is a simple design concept where the client follows the principle of least knowledge. Meaning that in order to get results from a complex subsystem, the client simply calls a facade class which is responsible for interacting with the complex subsystem. The client does not care about the entire complex subsystem, it just interacts with the facade class. 
+
+In the below example, it is a system that starts up a computer. The client only calls the facade class’s startComputer() method and the facade class is responsible for working with the complete start up system that has bios, memory, os, fans etc.
+
+![image.png](image%207.png)
